@@ -5,16 +5,32 @@
     <color name="blue_600">#2979FF</color>
     <color name="blue_200">#B3D1FF</color>
 
-    <!-- Splash Screen Colors -->
+    <!-- Splash Screen Colors (MISSING) -->
     <color name="splash_bg_start">#E7F0FF</color>
     <color name="splash_bg_end">#FFFFFF</color>
     <color name="splash_icon_bg">#E3EEFF</color>
 
-    <!-- Basic Colors (MISSING) -->
+    <!-- Basic Colors -->
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="transparent">#00000000</color>
     <color name="gray_light">#F5F5F5</color>
     <color name="gray_medium">#E0E0E0</color>
     <color name="gray_dark">#80000000</color>
+
+    <!-- Material Design Colors -->
+    <color name="colorPrimary">@color/blue_600</color>
+    <color name="colorPrimaryDark">@color/blue_700</color>
+    <color name="colorAccent">@color/blue_200</color>
+
+    <!-- Additional UI Colors -->
+    <color name="danger_red">#F44336</color>
+    <color name="success_green">#4CAF50</color>
+    <color name="warning_orange">#FF9800</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="text_hint">#BDBDBD</color>
+
 </resources>

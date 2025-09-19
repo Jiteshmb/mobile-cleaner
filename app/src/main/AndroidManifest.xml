@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Permissions -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -43,57 +42,15 @@
             android:exported="false"
             android:theme="@style/Theme.MobileCleaner"/>
 
-        <!-- Home Activities -->
+        <!-- CORRECT - JunkCleanerActivity is in onboarding package -->
+        <activity
+            android:name="com.hivas.mobilecleaner.onboarding.JunkCleanerActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MobileCleaner"/>
+
+        <!-- Home Activities (for later) -->
         <activity
             android:name="com.hivas.mobilecleaner.home.HomeActivity"
-            android:exported="false"
-            android:theme="@style/Theme.MobileCleaner"/>
-
-        <activity
-            android:name="com.hivas.mobilecleaner.home.JunkCleanerActivity"
-            android:exported="false"
-            android:theme="@style/Theme.MobileCleaner"/>
-
-        <!-- Premium/Settings Activities -->
-        <activity
-            android:name="com.hivas.mobilecleaner.premium.PremiumActivity"
-            android:exported="false"
-            android:theme="@style/Theme.MobileCleaner"/>
-
-        <activity
-            android:name="com.hivas.mobilecleaner.settings.SettingsActivity"
-            android:exported="false"
-            android:theme="@style/Theme.MobileCleaner"/>
-
-        <!-- Category Detail Activities -->
-        <activity
-            android:name="com.hivas.mobilecleaner.categories.CacheFilesActivity"
-            android:exported="false"
-            android:theme="@style/Theme.MobileCleaner"/>
-
-        <activity
-            android:name="com.hivas.mobilecleaner.categories.HiddenJunkActivity"
-            android:exported="false"
-            android:theme="@style/Theme.MobileCleaner"/>
-
-        <activity
-            android:name="com.hivas.mobilecleaner.categories.PackagesActivity"
-            android:exported="false"
-            android:theme="@style/Theme.MobileCleaner"/>
-
-        <!-- Utility Activities -->
-        <activity
-            android:name="com.hivas.mobilecleaner.utils.AboutActivity"
-            android:exported="false"
-            android:theme="@style/Theme.MobileCleaner"/>
-
-        <activity
-            android:name="com.hivas.mobilecleaner.utils.HelpActivity"
-            android:exported="false"
-            android:theme="@style/Theme.MobileCleaner"/>
-
-        <activity
-            android:name="com.hivas.mobilecleaner.utils.PrivacyPolicyActivity"
             android:exported="false"
             android:theme="@style/Theme.MobileCleaner"/>
 
