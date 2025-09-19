@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Info -->
+    <string name="app_name">Mobile Cleaner</string>
+
+    <!-- Splash Screen -->
+    <string name="splash_title">Phone Cleaner</string>
+    <string name="splash_subtitle">Clean, Organize, and Free Up Space Effortlessly.</string>
+    <string name="splash_status">Getting things ready…</string>
+    <string name="splash_logo_cd">App logo</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_skip">Skip</string>
+    <string name="onboarding_title">Hey!</string>
+    <string name="onboarding_subtitle">Welcome to Phone Cleaner. Let\'s walk you through your very first cleanup</string>
+    <string name="onboarding_continue">Continue</string>
+    <string name="onboarding_permission_note">Please allow required permission to scan files</string>
+    <string name="onboarding_robot_cd">Cleaning robot illustration</string>
+
+    <!-- Scanning -->
+    <string name="scanning_title">Hold tight…</string>
+    <string name="scanning_subtitle">We are executing your first scan experience</string>
+    <string name="scanning_files">Scanning Files…</string>
+    <string name="scanning_robot_cd">Scanning robot illustration</string>
+    <string name="scanning_status_starting">Starting scan…</string>
+    <string name="scanning_status_images">Scanning Images…</string>
+    <string name="scanning_status_videos">Scanning Videos…</string>
+    <string name="scanning_status_downloads">Scanning Downloads…</string>
+    <string name="scanning_status_cache">Analyzing Cache Files…</string>
+    <string name="scanning_status_complete">Scan Complete!</string>
+
+    <!-- Scan Results -->
+    <string name="scan_results_title">Scan Done</string>
+    <string name="scan_results_subtitle">Tap Clean now to get rid of all the junk in your phone.</string>
+    <string name="scan_results_clean_now">Clean Now</string>
+    <string name="scan_results_clean_now_template">Clean Now (%s)</string>
+    <string name="scan_results_disclaimer">No personal data is deleted in this process</string>
+    <string name="scan_results_skip">Skip</string>
+    <string name="scan_results_robot_cd">Cleaning robot with completed scan</string>
+
+    <!-- Cleaning Process -->
+    <string name="cleaning_title">Cleaning…</string>
+    <string name="cleaning_subtitle">Removing junk files from your device</string>
+    <string name="cleaning_button_progress">Cleaning…</string>
+    <string name="cleaning_step_cache">Clearing cache files…</string>
+    <string name="cleaning_step_images">Removing temporary images…</string>
+    <string name="cleaning_step_videos">Cleaning video thumbnails…</string>
+    <string name="cleaning_step_downloads">Optimizing download folder…</string>
+    <string name="cleaning_step_duplicates">Removing duplicate files…</string>
+    <string name="cleaning_step_finalizing">Finalizing cleanup…</string>
+    <string name="cleaning_complete_title">Cleaning Complete!</string>
+    <string name="cleaning_complete_subtitle">Successfully cleaned %s</string>
+    <string name="cleaning_complete_status">✓ All junk files removed</string>
+    <string name="cleaning_button_done">Done</string>
+
+    <!-- Junk Cleaner -->
+    <string name="junk_cleaner_title">Junk Cleaner</string>
+    <string name="junk_cleaner_trash_size">Trash Size</string>
+    <string name="junk_cleaner_disclaimer">ℹ No personal data is deleted in this process</string>
+    <string name="junk_cleaner_clean_up">Clean Up %s</string>
+    <string name="junk_cleaner_cleaning">Cleaning…</string>
+    <string name="junk_cleaner_cleaned">Cleaned ✓</string>
+
+    <!-- Junk Categories -->
+    <string name="category_cache_files">Cache Files</string>
+    <string name="category_cache_description">App cache and temporary data</string>
+    <string name="category_hidden_junk">Hidden Junk</string>
+    <string name="category_hidden_description">System logs and residual files</string>
+    <string name="category_packages">Packages</string>
+    <string name="category_packages_description">APK files and installation packages</string>
+
+    <!-- File Sizes -->
+    <string name="size_bytes">%d B</string>
+    <string name="size_kb">%.2f KB</string>
+    <string name="size_mb">%.2f MB</string>
+    <string name="size_gb">%.2f GB</string>
+    <string name="size_zero">0.00 B</string>
+
+    <!-- Home Screen -->
+    <string name="home_title">Home Screen - Mobile Cleaner App</string>
+    <string name="home_subtitle">Onboarding Complete!</string>
+
+    <!-- Premium Features -->
+    <string name="premium_title">Premium Feature</string>
+    <string name="premium_message">Hidden Junk cleaning requires Premium version</string>
+    <string name="premium_upgrade">Upgrade</string>
+    <string name="premium_cancel">Cancel</string>
+
+    <!-- Success Messages -->
+    <string name="cleaning_success_title">Cleaning Complete</string>
+    <string name="cleaning_success_message">Successfully cleaned %s of junk files</string>
+    <string name="cleaning_success_ok">OK</string>
+
+    <!-- Progress Messages -->
+    <string name="progress_starting">Getting started…</string>
+    <string name="progress_analyzing">Analyzing files…</string>
+    <string name="progress_calculating">Calculating sizes…</string>
+    <string name="progress_preparing">Preparing cleanup…</string>
+    <string name="progress_finishing">Almost done…</string>
+
+    <!-- Error Messages -->
+    <string name="error_scanning_failed">Scanning failed. Please try again.</string>
+    <string name="error_cleaning_failed">Cleaning failed. Please try again.</string>
+    <string name="error_generic">Something went wrong. Please try again.</string>
+
+    <!-- Navigation -->
+    <string name="nav_back">Back</string>
+    <string name="nav_close">Close</string>
+    <string name="nav_done">Done</string>
+    <string name="nav_next">Next</string>
+    <string name="nav_previous">Previous</string>
+
+    <!-- Content Descriptions (Accessibility) -->
+    <string name="cd_back_button">Back button</string>
+    <string name="cd_close_button">Close button</string>
+    <string name="cd_menu_button">Menu button</string>
+    <string name="cd_progress_bar">Progress indicator</string>
+    <string name="cd_lock_icon">Premium feature lock</string>
+    <string name="cd_category_icon">Category icon</string>
+    <string name="cd_check_mark">Completed check mark</string>
+    <string name="cd_magnifying_glass">Scanning magnifying glass</string>
+
+    <!-- Formatting Templates -->
+    <string name="template_found_files">Found %1$d large images, %2$d large videos, %3$d downloads, %4$s cache</string>
+    <string name="template_cleaning_progress">Cleaning… %d%%</string>
+    <string name="template_size_cleaned">%s cleaned</string>
+    <string name="template_files_count">%d files</string>
+
+    <!-- Button States -->
+    <string name="button_state_idle">Clean Now</string>
+    <string name="button_state_scanning">Scanning…</string>
+    <string name="button_state_cleaning">Cleaning…</string>
+    <string name="button_state_complete">Completed</string>
+
+    <!-- Scan Statistics -->
+    <string name="stats_images_scanned">Images scanned: %d</string>
+    <string name="stats_videos_scanned">Videos scanned: %d</string>
+    <string name="stats_cache_analyzed">Cache analyzed: %s</string>
+    <string name="stats_space_freed">Space freed: %s</string>
+
+</resources>

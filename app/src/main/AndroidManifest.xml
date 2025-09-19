@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MobileCleaner">
+
+        <!-- Splash Activity (Launcher) -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MobileCleaner.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Onboarding Activities -->
+        <activity
+            android:name="com.hivas.mobilecleaner.onboarding.OnboardingActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MobileCleaner"/>
+
+        <activity
+            android:name="com.hivas.mobilecleaner.onboarding.ScanningActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MobileCleaner"/>
+
+        <activity
+            android:name="com.hivas.mobilecleaner.onboarding.ScanResultsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MobileCleaner"/>
+
+        <!-- Home Activities -->
+        <activity
+            android:name="com.hivas.mobilecleaner.home.HomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MobileCleaner"/>
+
+        <activity
+            android:name="com.hivas.mobilecleaner.home.JunkCleanerActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MobileCleaner"/>
+
+        <!-- Premium/Settings Activities -->
+        <activity
+            android:name="com.hivas.mobilecleaner.premium.PremiumActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MobileCleaner"/>
+
+        <activity
+            android:name="com.hivas.mobilecleaner.settings.SettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MobileCleaner"/>
+
+        <!-- Category Detail Activities -->
+        <activity
+            android:name="com.hivas.mobilecleaner.categories.CacheFilesActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MobileCleaner"/>
+
+        <activity
+            android:name="com.hivas.mobilecleaner.categories.HiddenJunkActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MobileCleaner"/>
+
+        <activity
+            android:name="com.hivas.mobilecleaner.categories.PackagesActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MobileCleaner"/>
+
+        <!-- Utility Activities -->
+        <activity
+            android:name="com.hivas.mobilecleaner.utils.AboutActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MobileCleaner"/>
+
+        <activity
+            android:name="com.hivas.mobilecleaner.utils.HelpActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MobileCleaner"/>
+
+        <activity
+            android:name="com.hivas.mobilecleaner.utils.PrivacyPolicyActivity"
+            android:exported="false"
+            android:theme="@style/Theme.MobileCleaner"/>
+
+        <!-- WorkManager Components -->
+        <service
+            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+            android:directBootAware="false"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false" />
+
+        <service
+            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+            android:directBootAware="false"
+            android:enabled="@bool/enable_system_job_service_default"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:directBootAware="false"
+            android:enabled="@bool/enable_system_foreground_service_default"
+            android:exported="false" />
+
+        <!-- WorkManager Receivers -->
+        <receiver
+            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY" />
+                <action android:name="android.intent.action.BATTERY_LOW" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+            android:directBootAware="false"
+            android:enabled="@bool/enable_system_alarm_service_default"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+            </intent-filter>
+        </receiver>
+
+        <receiver
+            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedReceiver">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

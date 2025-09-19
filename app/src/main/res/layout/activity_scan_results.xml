@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/onboarding_gradient">
+
+    <!-- Skip button -->
+    <TextView
+        android:id="@+id/tv_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/scan_results_skip"
+        android:textSize="16sp"
+        android:textColor="#80303030"
+        android:padding="16dp"
+        android:background="?attr/selectableItemBackground"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"/>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/scan_results_title"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/tv_skip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/tv_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/scan_results_subtitle"
+        android:textSize="16sp"
+        android:textColor="#80303030"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="12dp"/>
+
+    <!-- Check mark 1 (top left) -->
+    <ImageView
+        android:id="@+id/iv_check1"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_check_circle_filled"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="280dp"
+        android:layout_marginStart="60dp"/>
+
+    <!-- Check mark 2 (top right) -->
+    <ImageView
+        android:id="@+id/iv_check2"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_check_circle_filled"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="80dp"/>
+
+    <!-- Robot illustration -->
+    <ImageView
+        android:id="@+id/iv_robot"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/ic_onboardingrobot"
+        android:contentDescription="@string/scan_results_robot_cd"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.45"/>
+
+    <!-- Magnifying glass -->
+    <ImageView
+        android:id="@+id/iv_magnify"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/ic_magnify_glass"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="320dp"
+        android:layout_marginEnd="40dp"/>
+
+    <!-- Check mark 3 (bottom left) -->
+    <ImageView
+        android:id="@+id/iv_check3"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_check_circle_filled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="340dp"
+        android:layout_marginStart="40dp"/>
+
+    <!-- Check mark 4 (bottom right) -->
+    <ImageView
+        android:id="@+id/iv_check4"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_check_circle_filled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="280dp"
+        android:layout_marginEnd="60dp"/>
+
+    <!-- Clean Now button -->
+    <Button
+        android:id="@+id/btn_clean_now"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:text="@string/scan_results_clean_now"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_primary_bg"
+        app:layout_constraintBottom_toTopOf="@id/tv_disclaimer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Clean size text (dynamic) -->
+    <TextView
+        android:id="@+id/tv_clean_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="14sp"
+        android:textColor="@color/blue_600"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/btn_clean_now"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Disclaimer text -->
+    <TextView
+        android:id="@+id/tv_disclaimer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/scan_results_disclaimer"
+        android:textSize="14sp"
+        android:textColor="#80303030"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

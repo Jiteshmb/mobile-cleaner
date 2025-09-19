@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- ONLY theme/style definitions here, NO strings -->
+    <style name="Theme.MobileCleaner" parent="Theme.Material3.Light.NoActionBar"/>
+
+    <style name="Theme.MobileCleaner.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/splash_bg_start</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splashicon</item>
+        <item name="postSplashScreenTheme">@style/Theme.MobileCleaner</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+
+
+</resources>
